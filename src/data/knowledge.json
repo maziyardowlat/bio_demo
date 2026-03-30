@@ -1,0 +1,9 @@
+[
+  {
+    "id": "sample-1",
+    "instructorName": "Dr. Example",
+    "title": "Sample Entry — Cell Biology Basics",
+    "content": "The cell is the basic structural and functional unit of all living organisms. Cells can be broadly categorized into prokaryotic cells (lacking a nucleus) and eukaryotic cells (containing a membrane-bound nucleus). Key organelles in eukaryotic cells include the mitochondria (energy production), endoplasmic reticulum (protein and lipid synthesis), and the Golgi apparatus (protein modification and sorting).",
+    "createdAt": "2026-03-30T00:00:00.000Z"
+  }
+]

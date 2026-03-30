@@ -1,9 +1,15 @@
-import ChatInterface from "@/components/ChatInterface";
-import Link from "next/link";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import Link from "next/link";
+import LoginForm from "@/components/LoginForm";
+import AdminDashboard from "@/components/AdminDashboard";
+
+export default function AdminPage() {
+  const [authenticated, setAuthenticated] = useState(false);
+
   return (
-    <div className="flex flex-col h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-[#002145] text-white">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -15,23 +21,25 @@ export default function Home() {
               <h1 className="text-base font-semibold leading-tight">
                 Biology Department
               </h1>
-              <p className="text-xs text-blue-200">
-                AI Knowledge Assistant
-              </p>
+              <p className="text-xs text-blue-200">Admin Portal</p>
             </div>
           </div>
           <Link
-            href="/admin"
+            href="/"
             className="text-xs text-blue-200 hover:text-white transition-colors"
           >
-            Admin
+            &larr; Back to Chat
           </Link>
         </div>
       </header>
 
-      {/* Chat */}
-      <main className="flex-1 overflow-hidden bg-white">
-        <ChatInterface />
+      {/* Content */}
+      <main className="py-8">
+        {authenticated ? (
+          <AdminDashboard />
+        ) : (
+          <LoginForm onSuccess={() => setAuthenticated(true)} />
+        )}
       </main>
     </div>
   );
