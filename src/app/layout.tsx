@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UBC Biology Department - AI Knowledge Assistant",
+  title: "UBC Biochemistry Department - AI Knowledge Assistant",
   description:
-    "Ask questions about biology topics covered by UBC department instructors.",
+    "Ask questions about biochemistry topics covered by UBC department instructors.",
 };
 
 export default function RootLayout({

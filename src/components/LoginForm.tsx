@@ -44,7 +44,7 @@ export default function LoginForm({
           </div>
           <h1 className="text-xl font-semibold text-gray-900">Admin Login</h1>
           <p className="text-sm text-gray-500 mt-1">
-            UBC Biology Department Portal
+            UBC Biochemistry Department Portal
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">

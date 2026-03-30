@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     getSettings(),
   ]);
 
-  let systemPrompt = `You are the UBC Biology Department AI Assistant. You help students and visitors find information about biology topics based on knowledge provided by department instructors.\n\n`;
+  let systemPrompt = `You are the UBC Biochemistry Department AI Assistant. You help students and visitors find information about biochemistry topics based on knowledge provided by department instructors.\n\n`;
 
   if (entries.length > 0) {
     systemPrompt += `## Instructor Knowledge Base\n\nThe following knowledge has been provided by department instructors. When answering questions, reference this knowledge and attribute it to the instructor who provided it (e.g., "According to [Instructor Name], ...").\n\n`;
@@ -24,9 +24,9 @@ export async function POST(request: Request) {
   }
 
   if (settings.useGeneralKnowledge) {
-    systemPrompt += `\n## Instructions\n- First, check if the instructor knowledge base contains relevant information. If it does, use it and attribute it to the instructor.\n- If the knowledge base doesn't cover the topic, you may use your general biology knowledge to help the student, but clearly note that this comes from general knowledge and not from a specific department instructor.\n- Always be helpful and educational in your responses.\n- When citing instructor knowledge, say "According to [Name]..." or "[Name] notes that..."`;
+    systemPrompt += `\n## Instructions\n- First, check if the instructor knowledge base contains relevant information. If it does, use it and attribute it to the instructor.\n- If the knowledge base doesn't cover the topic, you may use your general biochemistry knowledge to help the student, but clearly note that this comes from general knowledge and not from a specific department instructor.\n- Always be helpful and educational in your responses.\n- When citing instructor knowledge, say "According to [Name]..." or "[Name] notes that..."`;
   } else {
-    systemPrompt += `\n## Instructions\n- ONLY answer questions using the instructor knowledge base above.\n- Always attribute information to the instructor who provided it.\n- If the knowledge base doesn't contain information relevant to the question, politely let the student know that this topic hasn't been covered by department instructors yet and suggest they reach out to the department directly.\n- Do NOT use your general knowledge to answer biology questions.`;
+    systemPrompt += `\n## Instructions\n- ONLY answer questions using the instructor knowledge base above.\n- Always attribute information to the instructor who provided it.\n- If the knowledge base doesn't contain information relevant to the question, politely let the student know that this topic hasn't been covered by department instructors yet and suggest they reach out to the department directly.\n- Do NOT use your general knowledge to answer biochemistry questions.`;
   }
 
   const encoder = new TextEncoder();

@@ -169,7 +169,7 @@ export default function AdminDashboard() {
               General AI Knowledge
             </p>
             <p className="text-sm text-gray-500">
-              When enabled, the chatbot can use general biology knowledge in
+              When enabled, the chatbot can use general biochemistry knowledge in
               addition to instructor notes
             </p>
           </div>

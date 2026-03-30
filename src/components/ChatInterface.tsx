@@ -96,18 +96,18 @@ export default function ChatInterface() {
           <div className="flex flex-col items-center justify-center h-full text-center text-gray-500">
             <div className="text-6xl mb-4">🧬</div>
             <h2 className="text-xl font-semibold text-gray-700">
-              Welcome to UBC Biology
+              Welcome to UBC Biochemistry
             </h2>
             <p className="mt-2 max-w-md text-gray-500">
-              Ask me anything about biology topics covered by our department
+              Ask me anything about biochemistry topics covered by our department
               instructors.
             </p>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg">
               {[
                 "What topics are covered by the department?",
-                "Tell me about cell biology",
-                "What does our instructor say about genetics?",
-                "Help me understand ecology concepts",
+                "Tell me about cell biochemistry",
+                "What does our instructor say about protein folding?",
+                "Help me understand enzyme kinetics",
               ].map((suggestion) => (
                 <button
                   key={suggestion}
@@ -187,7 +187,7 @@ export default function ChatInterface() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask a biology question..."
+            placeholder="Ask a biochemistry question..."
             className="flex-1 rounded-full border border-gray-300 px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#002145] focus:border-transparent"
             disabled={loading}
           />
